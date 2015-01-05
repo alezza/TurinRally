@@ -17,7 +17,7 @@ public enum Singleton {
         int i;
         Random r = new Random();
         for (i = 0; i < 4; i++) {
-            letterToReturn = alphabet.charAt(r.nextInt(4));
+            letterToReturn = alphabet.charAt(r.nextInt(N));
         }
         currentAlphabet = currentAlphabet.replaceAll("letterToReturn","");
         return letterToReturn;
