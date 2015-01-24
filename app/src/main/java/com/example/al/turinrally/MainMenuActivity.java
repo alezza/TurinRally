@@ -2,6 +2,7 @@ package com.example.al.turinrally;
 
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -49,7 +50,11 @@ public class MainMenuActivity extends ActionBarActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(context, WikiActivity.class);
+                Intent intent = new Intent();
+                intent.setAction(Intent.ACTION_VIEW);
+                Uri webpage = Uri.parse("http://en.wikipedia.org/wiki/Turin");
+                intent.setData(webpage);
+                intent.setPackage("org.wikipedia");
                 startActivity(intent);
             }
         });
