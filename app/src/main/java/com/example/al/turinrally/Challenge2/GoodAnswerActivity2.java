@@ -1,4 +1,4 @@
-package com.example.al.turinrally;
+package com.example.al.turinrally.Challenge2;
 
 import android.content.Context;
 import android.content.Intent;
@@ -9,6 +9,9 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+
+import com.example.al.turinrally.MainActivity;
+import com.example.al.turinrally.R;
 
 
 public class GoodAnswerActivity2 extends ActionBarActivity {

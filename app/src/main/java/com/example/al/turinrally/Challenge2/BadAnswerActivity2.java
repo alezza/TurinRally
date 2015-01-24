@@ -1,61 +1,39 @@
-package com.example.al.turinrally;
+package com.example.al.turinrally.Challenge2;
 
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.graphics.Matrix;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.view.Display;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageButton;
-import android.widget.ImageView;
 
-import java.util.Random;
+import com.example.al.turinrally.Challenge3.Challenge3Activity;
+import com.example.al.turinrally.MainActivity;
+import com.example.al.turinrally.R;
 
 
-public class Challenge1Activity extends ActionBarActivity {
-    ImageButton button;
+public class BadAnswerActivity2 extends ActionBarActivity {
+    Button button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_challenge1);
+        setContentView(R.layout.activity_bad_answer_activity2);
 
         addListenerOnButton1();
         addListenerOnButton2();
         addListenerOnButton3();
-        addListenerOnButton4();
-
-    }
-
-    private void addListenerOnButton4() {
-        final Context context = this;
-        button = (ImageButton)findViewById(R.id.imageButton4);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(context, BadAnswerActivity.class);
-                startActivity(intent);
-            }
-        });
     }
 
     private void addListenerOnButton3() {
         final Context context = this;
-        button = (ImageButton)findViewById(R.id.imageButton3);
+        button = (Button)findViewById(R.id.buttonretmap);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                char winning = Singleton.INSTANCE.getRandomLetter();
-                Intent intent = new Intent(context, GoodAnswerActivity.class);
-                intent.putExtra("letter", winning);
+                Intent intent = new Intent(context, MainActivity.class);
                 startActivity(intent);
             }
         });
@@ -63,11 +41,11 @@ public class Challenge1Activity extends ActionBarActivity {
 
     private void addListenerOnButton2() {
         final Context context = this;
-        button = (ImageButton)findViewById(R.id.imageButton2);
+        button = (Button)findViewById(R.id.buttonnextchallenge);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(context, BadAnswerActivity.class);
+                Intent intent = new Intent(context, Challenge3Activity.class);
                 startActivity(intent);
             }
         });
@@ -75,20 +53,22 @@ public class Challenge1Activity extends ActionBarActivity {
 
     private void addListenerOnButton1() {
         final Context context = this;
-        button = (ImageButton)findViewById(R.id.imageButton1);
+        button = (Button)findViewById(R.id.buttontryagain);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(context, BadAnswerActivity.class);
+                Intent intent = new Intent(context, Challenge2Activity.class);
                 startActivity(intent);
+                finish();
             }
         });
     }
 
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_challenge1, menu);
+        getMenuInflater().inflate(R.menu.menu_bad_answer_activity2, menu);
         return true;
     }
 

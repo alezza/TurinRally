@@ -5,10 +5,14 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.location.Location;
 import android.os.Bundle;
-import android.support.v4.app.ActionBarDrawerToggle;
 import android.util.Log;
 import android.view.Menu;
 
+import com.example.al.challenges.*;
+import com.example.al.challenges.CompositeChallenge;
+import com.example.al.turinrally.Challenge1.*;
+import com.example.al.turinrally.Challenge2.*;
+import com.example.al.turinrally.Challenge3.*;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
@@ -39,6 +43,13 @@ public class MainActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
+        final CompositeChallenge compositeChallenge = new CompositeChallenge();
+        compositeChallenge.add(new Challenge1());
+        compositeChallenge.add(new Challenge2());
+        compositeChallenge.add(new Challenge3());
+        compositeChallenge.add(new Challenge4());
+
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -55,6 +66,13 @@ public class MainActivity extends Activity {
                 if (marker.getPosition().latitude==45.069025 && marker.getPosition().longitude==7.693235){
                     intent = new Intent(context, Challenge3Activity.class);
                 }
+
+                Bundle bundle = new Bundle();
+
+                bundle.putString("challange", compositeChallenge.getRandomChallenge().toString());
+
+                intent.putExtras(bundle);
+
                 startActivity(intent);
                 return true;
             }

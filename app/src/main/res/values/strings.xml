@@ -28,5 +28,11 @@
     <string name="title_activity_good_answer_activity2">GoodAnswerActivity2</string>
     <string name="title_activity_bad_answer_activity2">BadAnswerActivity2</string>
     <string name="title_activity_challenge3">Challenge3Activity</string>
+    <string name="title_activity_turin_rally">TurinRallyActivity</string>
+    <string name="title_activity_about_app">AboutAppActivity</string>
+    <string name="title_activity_wiki">WikiActivity</string>
+    <string name="disclaimer"><b>Disclaimer:</b>\n\n
+        This application was created for the purpose of completing a Software Development Project comprised in the evaluation scheme of the "Principles of Software Development" course at the University of Luxembourg. The project aims to demonstrate that the basic concepts of programming with Android have been understood and dully applied in order to create a "City Rally" application. This application is intended to provide some general points on interest within a city, together with an innovative and interesting was of learning about these particular landmarks.\n\n\n
+        © January 2015 Andra Lezza All Rights Reserved"</string>
 
 </resources>

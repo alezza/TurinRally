@@ -82,6 +82,22 @@
             android:name=".Challenge3Activity"
             android:label="@string/title_activity_challenge3" >
         </activity>
+        <activity
+            android:name=".TurinRallyActivity"
+            android:label="@string/title_activity_turin_rally" >
+        </activity>
+        <activity
+            android:name=".AboutAppActivity"
+            android:label="@string/title_activity_about_app" >
+        </activity>
+        <activity
+            android:name=".WikiActivity"
+            android:label="@string/title_activity_wiki" >
+        </activity>
+        <activity
+            android:name=".GameActivity"
+            android:label="@string/title_activity_game" >
+        </activity>
     </application>
 
 </manifest>

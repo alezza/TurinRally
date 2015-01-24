@@ -1,50 +1,47 @@
-package com.example.al.turinrally;
+package com.example.al.turinrally.Challenge1;
 
 import android.content.Context;
 import android.content.Intent;
-import android.net.Uri;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
 
+import com.example.al.turinrally.R;
+import com.example.al.turinrally.Singleton;
 
-public class Challenge2Activity extends ActionBarActivity {
-    Button button;
+
+public class Challenge1Activity extends ActionBarActivity {
+    ImageButton button;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_challenge2);
+        setContentView(R.layout.activity_challenge1);
 
         addListenerOnButton1();
         addListenerOnButton2();
         addListenerOnButton3();
         addListenerOnButton4();
-        addListenerOnButton5();
-    }
 
-    private void addListenerOnButton5() {
-        final Context context = this;
-        button = (Button)findViewById(R.id.buttonpal);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(context, BadAnswerActivity2.class);
-                startActivity(intent);
-            }
-        });
+        Bundle bundle = getIntent().getExtras();
+
+        String ch = bundle.getString("challenge");
+
+        System.out.print(ch);
+
     }
 
     private void addListenerOnButton4() {
         final Context context = this;
-        button = (Button)findViewById(R.id.buttoncol);
+        button = (ImageButton)findViewById(R.id.imageButton4);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(context, BadAnswerActivity2.class);
+                Intent intent = new Intent(context, BadAnswerActivity.class);
                 startActivity(intent);
             }
         });
@@ -52,11 +49,13 @@ public class Challenge2Activity extends ActionBarActivity {
 
     private void addListenerOnButton3() {
         final Context context = this;
-        button = (Button)findViewById(R.id.buttoncastel);
+        button = (ImageButton)findViewById(R.id.imageButton3);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(context, BadAnswerActivity2.class);
+                char winning = Singleton.INSTANCE.getRandomLetter();
+                Intent intent = new Intent(context, GoodAnswerActivity.class);
+                intent.putExtra("letter", winning);
                 startActivity(intent);
             }
         });
@@ -64,14 +63,11 @@ public class Challenge2Activity extends ActionBarActivity {
 
     private void addListenerOnButton2() {
         final Context context = this;
-        button = (Button)findViewById(R.id.buttonmole);
+        button = (ImageButton)findViewById(R.id.imageButton2);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                char winning = Singleton.INSTANCE.getRandomLetter();
-                Intent intent;
-                intent = new Intent(context, GoodAnswerActivity2.class);
-                intent.putExtra("letter", winning);
+                Intent intent = new Intent(context, BadAnswerActivity.class);
                 startActivity(intent);
             }
         });
@@ -79,22 +75,20 @@ public class Challenge2Activity extends ActionBarActivity {
 
     private void addListenerOnButton1() {
         final Context context = this;
-        button = (Button)findViewById(R.id.buttonwiki);
+        button = (ImageButton)findViewById(R.id.imageButton1);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Intent.ACTION_VIEW,
-                        Uri.parse("http://en.wikipedia.org/wiki/Italian_euro_coins"));
+                Intent intent = new Intent(context, BadAnswerActivity.class);
                 startActivity(intent);
             }
         });
     }
 
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_challenge2, menu);
+        getMenuInflater().inflate(R.menu.menu_challenge1, menu);
         return true;
     }
 

@@ -32,6 +32,27 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".GameActivity"
+            android:label="@string/title_activity_game" >
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".AboutAppActivity"
+            android:label="@string/title_activity_about_app" >
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".WikiActivity"
+            android:label="@string/title_activity_wiki" >
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".MainActivity"
             android:label="@string/title_activity_main" >
             <intent-filter>
@@ -39,46 +60,46 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Challenge1Activity"
+            android:name=".Challenge1.Challenge1Activity"
             android:label="@string/title_activity_challenge1" >
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
-            android:name=".GoodAnswerActivity"
+            android:name=".Challenge1.GoodAnswerActivity"
             android:label="@string/title_activity_good_answer" >
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
-            android:name=".BadAnswerActivity"
+            android:name=".Challenge1.BadAnswerActivity"
             android:label="@string/title_activity_bad_answer" >
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
-            android:name=".Challenge2Activity"
+            android:name=".Challenge2.Challenge2Activity"
             android:label="@string/title_activity_challenge2" >
         </activity>
         <activity
-            android:name=".GoodAnswerActivity2"
+            android:name=".Challenge2.GoodAnswerActivity2"
             android:label="@string/title_activity_good_answer_activity2" >
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
-            android:name=".BadAnswerActivity2"
+            android:name=".Challenge2.BadAnswerActivity2"
             android:label="@string/title_activity_bad_answer_activity2" >
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
-            android:name=".Challenge3Activity"
+            android:name=".Challenge3.Challenge3Activity"
             android:label="@string/title_activity_challenge2" >
         </activity>
         <!--<activity

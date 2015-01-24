@@ -25,10 +25,36 @@ public class MainMenuActivity extends ActionBarActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main_menu);
         addListenerOnButton1();
-        //addListenerOnButton2();
+        addListenerOnButton2();
+        addListenerOnButton3();
+        addListenerOnButton4();
 
 	}
-    /*
+
+    private void addListenerOnButton4() {
+        final Context context = this;
+        button = (Button)findViewById(R.id.button6);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, AboutAppActivity.class);
+                startActivity(intent);
+            }
+        });
+    }
+
+    private void addListenerOnButton3() {
+        final Context context = this;
+        button = (Button)findViewById(R.id.button5);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, WikiActivity.class);
+                startActivity(intent);
+            }
+        });
+    }
+
     private void addListenerOnButton2() {
         final Context context = this;
         button = (Button)findViewById(R.id.button4);
@@ -40,7 +66,7 @@ public class MainMenuActivity extends ActionBarActivity {
             }
         });
     }
-*/
+
     private void addListenerOnButton1() {
         final Context context = this;
         button = (Button)findViewById(R.id.button3);
