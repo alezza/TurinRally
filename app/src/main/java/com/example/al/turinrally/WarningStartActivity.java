@@ -37,16 +37,16 @@ public class WarningStartActivity extends ActionBarActivity {
 
     private void addListenerOnButton1() {
         final Context context = this;
-        button = (Button)findViewById(R.id.buttonMap);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(context, MainActivity.class);
-                int Stage = 1;
-                intent.putExtra("stage",Stage);
-                startActivity(intent);
-            }
-        });
+            button = (Button)findViewById(R.id.buttonMap);
+            button.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(context, MainActivity.class);
+                    int Stage = 1;
+                    intent.putExtra("stage",Stage);
+                    startActivity(intent);
+                }
+            });
     }
 
 

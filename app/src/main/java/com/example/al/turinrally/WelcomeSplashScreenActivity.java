@@ -12,59 +12,59 @@ import android.widget.TextView;
 
 public class WelcomeSplashScreenActivity extends TurinRallyActivity{
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        // TODO Auto-generated method stub
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.welcome_splash);
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.welcome_splash);
 /*		Intent intent = new Intent(WelcomeSplashScreenActivity.this, MainMenuActivity.class);
 		startActivity(intent);*/
 
-        startAnimating();
-    }
+		startAnimating();
+	}
 
-    public void startAnimating(){
-
-        // Fade in top title
-        TextView logo1 = (TextView) findViewById(R.id.TextViewTopTitle);
-        Animation fade1 = AnimationUtils.loadAnimation(this, R.anim.fade_in);
-        logo1.startAnimation(fade1);
-
-        // Fade in bottom title after a built-in delay.
-        TextView logo2 = (TextView) findViewById(R.id.TextViewBottomTitle);
-        Animation fade2 = AnimationUtils.loadAnimation(this, R.anim.fade_in2);
-        logo2.startAnimation(fade2);
-        // Transition to Main Menu when bottom title finishes animating
-        fade2.setAnimationListener(new AnimationListener() {
-            public void onAnimationEnd(Animation animation) {
-                // The animation has ended, transition to the Main Menu screen
-                Intent intent = new Intent(WelcomeSplashScreenActivity.this, MainMenuActivity.class);
-                startActivity(intent);
-                //startActivity(new Intent(WelcomeSplashScreenActivity.this, MainMenuActivity.class));
-                //WelcomeSplashScreenActivity.this.finish();
-            }
+	public void startAnimating(){
+		
+		// Fade in top title
+		TextView logo1 = (TextView) findViewById(R.id.TextViewTopTitle);
+		Animation fade1 = AnimationUtils.loadAnimation(this, R.anim.fade_in);
+		logo1.startAnimation(fade1);
+		
+		// Fade in bottom title after a built-in delay.
+		TextView logo2 = (TextView) findViewById(R.id.TextViewBottomTitle);
+		Animation fade2 = AnimationUtils.loadAnimation(this, R.anim.fade_in2);
+		logo2.startAnimation(fade2);
+		// Transition to Main Menu when bottom title finishes animating
+		fade2.setAnimationListener(new AnimationListener() {
+			public void onAnimationEnd(Animation animation) {
+				// The animation has ended, transition to the Main Menu screen
+				Intent intent = new Intent(WelcomeSplashScreenActivity.this, MainMenuActivity.class);
+				startActivity(intent);
+				//startActivity(new Intent(WelcomeSplashScreenActivity.this, MainMenuActivity.class));
+				//WelcomeSplashScreenActivity.this.finish();
+			}
             public void onAnimationRepeat(Animation animation) {
             }
 
             public void onAnimationStart(Animation animation) {
             }
+			
+		});	
+		
+		// Load animations for all views within the TableLayout
+		Animation spinIn = AnimationUtils.loadAnimation(this, R.anim.custom_anim);
+		LayoutAnimationController controller =	new LayoutAnimationController(spinIn);
+		TableLayout table = (TableLayout) findViewById(R.id.TableLayout01);
+		for (int i = 0; i < table.getChildCount(); i++) {
+		TableRow row = (TableRow) table.getChildAt(i);
+		row.setLayoutAnimation(controller);
+		}	
+	}
 
-        });
-
-        // Load animations for all views within the TableLayout
-        Animation spinIn = AnimationUtils.loadAnimation(this, R.anim.custom_anim);
-        LayoutAnimationController controller =	new LayoutAnimationController(spinIn);
-        TableLayout table = (TableLayout) findViewById(R.id.TableLayout01);
-        for (int i = 0; i < table.getChildCount(); i++) {
-            TableRow row = (TableRow) table.getChildAt(i);
-            row.setLayoutAnimation(controller);
-        }
-    }
-
-    @Override
-    protected void onPause() {
-        // TODO Auto-generated method stub
-        super.onPause();
+	@Override
+	protected void onPause() {
+		// TODO Auto-generated method stub
+		super.onPause();
 
         // Stop the animation
         TextView logo1 = (TextView) findViewById(R.id.TextViewTopTitle);
@@ -76,14 +76,14 @@ public class WelcomeSplashScreenActivity extends TurinRallyActivity{
             TableRow row = (TableRow) table.getChildAt(i);
             row.clearAnimation();
         }
-    }
-
+	}
+	
     @Override
     protected void onResume() {
         super.onResume();
 
         // Start animating at the beginning so we get the full splash screen experience
         startAnimating();
-    }
+    }	
 
 }

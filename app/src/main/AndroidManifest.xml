@@ -27,7 +27,7 @@
             android:name=".MainMenuActivity"
             android:label="@string/title_activity_main_menu" >
             <intent-filter>
-                <!--<action android:name="android.intent.action.MAIN" />-->
+                <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
@@ -51,36 +51,36 @@
             android:label="@string/title_activity_main" >
         </activity>
         <activity
-            android:name=".Challenge1.Challenge1Activity"
+            android:name=".challenge1"
             android:label="@string/title_activity_challenge1" >
         </activity>
         <activity
-            android:name=".Challenge1.BadAnswerActivity"
+            android:name=".BadAnswerActivity"
             android:label="@string/title_activity_bad_answer" >
         </activity>
         <activity
-            android:name=".Challenge2.Challenge2Activity"
+            android:name=".Challenge2Activity"
             android:label="@string/title_activity_challenge2" >
         </activity>
         <activity
-            android:name=".Challenge1.GoodAnswerActivity"
+            android:name=".GoodAnswerActivity"
             android:label="@string/title_activity_good_answer" >
         </activity>
         <activity
-            android:name=".Challenge2.BadAnswerActivity2"
+            android:name=".BadAnswerActvitity2"
             android:label="@string/title_activity_bad_answer_actvitity2" >
         </activity>
         <activity
-            android:name=".Challenge2.GoodAnswerActivity2"
+            android:name=".GoodAnswerActivity2"
             android:label="@string/title_activity_good_answer_activity2" >
         </activity>
         <activity
-            android:name=".Challenge2.BadAnswerActivity2"
+            android:name=".BadAnswerActivity2"
             android:label="@string/title_activity_bad_answer_activity2" >
         </activity>
         <activity
-            android:name=".Challenge3.Challenge3Activity"
-            android:label="@string/title_activity_activity3" >
+            android:name=".Challenge3Activity"
+            android:label="@string/title_activity_challenge3" >
         </activity>
         <activity
             android:name=".TurinRallyActivity"
@@ -91,24 +91,12 @@
             android:label="@string/title_activity_about_app" >
         </activity>
         <activity
-            android:name=".Challenge3.BadAnswerActivity3"
-            android:label="@string/title_activity_bad_answer_activity3" >
+            android:name=".WikiActivity"
+            android:label="@string/title_activity_wiki" >
         </activity>
         <activity
-            android:name=".Challenge3.GoodAnswerActivity3"
-            android:label="@string/title_activity_good_answer_activity3" >
-        </activity>
-        <activity
-            android:name=".Challenge4.Challenge4Activity"
-            android:label="@string/title_activity_activity4" >
-        </activity>
-        <activity
-            android:name=".Challenge4.GoodAnswerActivity4"
-            android:label="@string/title_activity_good_answer_activity4" >
-        </activity>
-        <activity
-            android:name=".Challenge4.BadAnswerActivity4"
-            android:label="@string/title_activity_bad_answer_activity4" >
+            android:name=".GameActivity"
+            android:label="@string/title_activity_game" >
         </activity>
     </application>
 

@@ -86,27 +86,7 @@
         </activity>
         <activity
             android:name=".Challenge3.Challenge3Activity"
-            android:label="@string/title_activity_activity3" >
-        </activity>
-        <activity
-            android:name=".Challenge3.BadAnswerActivity3"
-            android:label="@string/title_activity_bad_answer_activity3" >
-        </activity>
-        <activity
-            android:name=".Challenge3.GoodAnswerActivity3"
-            android:label="@string/title_activity_good_answer_activity3" >
-        </activity>
-        <activity
-            android:name=".Challenge4.Challenge4Activity"
-            android:label="@string/title_activity_activity4" >
-        </activity>
-        <activity
-            android:name=".Challenge4.GoodAnswerActivity4"
-            android:label="@string/title_activity_good_answer_activity4" >
-        </activity>
-        <activity
-            android:name=".Challenge4.BadAnswerActivity4"
-            android:label="@string/title_activity_bad_answer_activity4" >
+            android:label="@string/title_activity_challenge2" >
         </activity>
         <!--<activity
             android:name=".WarningStartActivity"
