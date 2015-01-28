@@ -1,59 +1,54 @@
-package com.example.al.turinrally;
+package com.example.al.turinrally.Challenge4;
 
 import android.content.Context;
+import android.content.DialogInterface.OnKeyListener;
 import android.content.Intent;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
+import android.util.Log;
+import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
+import com.example.al.turinrally.R;
 
-public class WarningStartActivity extends ActionBarActivity {
-    Button button;
+public class Challenge4Activity extends ActionBarActivity {
+
+    private Button button;
+    private EditText input;
+    private String message;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_warning_start);
+        setContentView(R.layout.activity_challenge4);
 
         addListenerOnButton1();
-        addListenerOnButton2();
-    }
-
-    private void addListenerOnButton2() {
-        final Context context = this;
-        button = (Button)findViewById(R.id.button2);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(context, MainMenuActivity.class);
-                startActivity(intent);
-                finish();
-            }
-        });
     }
 
     private void addListenerOnButton1() {
         final Context context = this;
-        button = (Button)findViewById(R.id.buttonMap);
+        input = (EditText) findViewById(R.id.editText);
+        button = (Button)findViewById(R.id.checkAnswer);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(context, MainActivity.class);
-                int Stage = 1;
-                intent.putExtra("stage",Stage);
-                startActivity(intent);
+                //Intent intent = new Intent(context, BadAnswerActivity4.class);
+                //startActivity(intent);
+                Toast.makeText(Challenge4Activity.this,
+                        input.getText().toString(), Toast.LENGTH_LONG).show();
             }
         });
     }
 
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_warning_start, menu);
+        getMenuInflater().inflate(R.menu.menu_challenge4, menu);
         return true;
     }
 

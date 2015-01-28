@@ -11,31 +11,31 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:contentDescription="@string/photo_desc"
-        android:src="@drawable/torino3" 
+        android:src="@drawable/torino3"
         android:adjustViewBounds="true"/>
-    
-   <TextView
+
+    <TextView
         android:id="@+id/welcome_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below ="@id/turin_photo"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:text="@string/welcome_to_turin" 
+        android:text="@string/welcome_to_turin"
         android:textColor="@color/text_color"
         android:paddingTop="20dp"
-    	android:paddingBottom="10dp"/>
+        android:paddingBottom="10dp"/>
 
-	<ListView 
-		android:id="@+id/list"
-		android:layout_width="match_parent"
-		android:layout_height="match_parent"
-		android:layout_alignParentBottom="true"
-		android:layout_alignParentStart="true"
-		android:layout_alignParentLeft="true"
-		android:layout_below ="@id/welcome_text"
-		android:paddingTop="5dp"
-    	android:paddingBottom="5dp">
-	</ListView>
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_below ="@id/welcome_text"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp">
+    </ListView>
 
 </RelativeLayout>

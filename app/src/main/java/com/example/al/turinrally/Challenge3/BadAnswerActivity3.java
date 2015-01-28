@@ -2,39 +2,38 @@ package com.example.al.turinrally.Challenge3;
 
 import android.content.Context;
 import android.content.Intent;
-import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
+import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.al.turinrally.Challenge4.Challenge4Activity;
+import com.example.al.turinrally.MainActivity;
 import com.example.al.turinrally.R;
-import com.example.al.turinrally.Singleton;
 
-
-public class Challenge3Activity extends ActionBarActivity {
+public class BadAnswerActivity3 extends ActionBarActivity {
 
     Button button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_challenge3);
+        setContentView(R.layout.activity_bad_answer_activity3);
 
         addListenerOnButton1();
         addListenerOnButton2();
         addListenerOnButton3();
-        addListenerOnButton4();
     }
 
-    private void addListenerOnButton1() {
+    private void addListenerOnButton3() {
         final Context context = this;
-        button = (Button)findViewById(R.id.answerA);
+        button = (Button)findViewById(R.id.buttonretmap);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(context, BadAnswerActivity3.class);
+                Intent intent = new Intent(context, MainActivity.class);
                 startActivity(intent);
             }
         });
@@ -42,40 +41,25 @@ public class Challenge3Activity extends ActionBarActivity {
 
     private void addListenerOnButton2() {
         final Context context = this;
-        button = (Button)findViewById(R.id.answerB);
+        button = (Button)findViewById(R.id.buttonnextchallenge);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                char winning = Singleton.INSTANCE.getRandomLetter();
-                Intent intent;
-                intent = new Intent(context, GoodAnswerActivity3.class);
-                intent.putExtra("letter", winning);
+                Intent intent = new Intent(context, Challenge4Activity.class);
                 startActivity(intent);
             }
         });
     }
 
-    private void addListenerOnButton3() {
+    private void addListenerOnButton1() {
         final Context context = this;
-        button = (Button)findViewById(R.id.answerC);
+        button = (Button)findViewById(R.id.buttontryagain);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(context, BadAnswerActivity3.class);
+                Intent intent = new Intent(context, Challenge3Activity.class);
                 startActivity(intent);
-            }
-        });
-    }
-
-    private void addListenerOnButton4() {
-
-        final Context context = this;
-        button = (Button)findViewById(R.id.answerD);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(context, BadAnswerActivity3.class);
-                startActivity(intent);
+                finish();
             }
         });
     }
@@ -84,7 +68,7 @@ public class Challenge3Activity extends ActionBarActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_challenge3, menu);
+        getMenuInflater().inflate(R.menu.menu_bad_answer_activity3, menu);
         return true;
     }
 
