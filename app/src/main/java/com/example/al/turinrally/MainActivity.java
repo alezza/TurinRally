@@ -13,6 +13,7 @@ import com.example.al.challenges.CompositeChallenge;
 import com.example.al.turinrally.Challenge1.*;
 import com.example.al.turinrally.Challenge2.*;
 import com.example.al.turinrally.Challenge3.*;
+import com.example.al.turinrally.Challenge4.Challenge4Activity;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
@@ -29,6 +30,8 @@ public class MainActivity extends Activity {
     static final LatLng TURIN = new LatLng(45.070312, 7.686856);
     static final LatLng START = new LatLng(45.071412, 7.685223);
     static final LatLng MOLEA = new LatLng(45.069025, 7.693235);
+    static final LatLng GRANM = new LatLng(45.062578, 7.699436);
+
     private GoogleMap map;
     private Polyline mapPolyLine;
     static final LatLng INIT = new LatLng(45, 7.6);
@@ -38,6 +41,7 @@ public class MainActivity extends Activity {
     Marker start;
     Marker turin;
     Marker mole;
+    Marker gran;
     Polyline path;
 
     @Override
@@ -48,6 +52,7 @@ public class MainActivity extends Activity {
         compositeChallenge.add(new Challenge2());
         compositeChallenge.add(new Challenge3());
         compositeChallenge.add(new Challenge4());
+        compositeChallenge.add(new FinalMystery());
 
 
         super.onCreate(savedInstanceState);
@@ -65,6 +70,10 @@ public class MainActivity extends Activity {
                 }
                 if (marker.getPosition().latitude==45.069025 && marker.getPosition().longitude==7.693235){
                     intent = new Intent(context, Challenge3Activity.class);
+                }
+
+                if (marker.getPosition().latitude==45.062578 && marker.getPosition().longitude==7.699436){
+                    intent = new Intent(context, Challenge4Activity.class);
                 }
 
                 Bundle bundle = new Bundle();
@@ -89,13 +98,26 @@ public class MainActivity extends Activity {
                         .fromResource(R.drawable.ic_launcher)));
         start.showInfoWindow();
 
-        mole = map.addMarker(new MarkerOptions().position(MOLEA)
-                .title("Mole Antonelliana"));
+        mole = map.addMarker(new MarkerOptions()
+                .position(MOLEA)
+                .title("Mole Antonelliana")
+                .snippet("Second Point of Interest")
+                .icon(BitmapDescriptorFactory
+                        .fromResource(R.drawable.ic_launcher)));
         mole.showInfoWindow();
+
+        gran = map.addMarker(new MarkerOptions()
+                .position(GRANM)
+                .title("Gran Madre Cathedral")
+                .snippet("Final Point of Interest")
+                .icon(BitmapDescriptorFactory
+                        .fromResource(R.drawable.ic_launcher)));
+        gran.showInfoWindow();
 
         turin.setVisible(false);
         start.setVisible(false);
         mole.setVisible(false);
+        gran.setVisible(false);
 
       /*  PolylineOptions addPathOptions = new PolylineOptions()
                 .add(new LatLng(45.071412, 7.685223))
@@ -112,7 +134,7 @@ public class MainActivity extends Activity {
             deletePolyLine();
         }
         LatLng origin = new LatLng(45.071412, 7.685223);
-        LatLng destination = new LatLng(45.069025, 7.693235);
+        LatLng destination = new LatLng(45.062578, 7.699436);
          getDirectionForCoordinates(origin, destination);
         int getResult = getIntent().getIntExtra("stage", 99);
         System.out.println(getResult);
@@ -121,10 +143,10 @@ public class MainActivity extends Activity {
             createStage1Markers();
         else if(getResult==2)
             createStage2Markers();
-        //else if(stage==3)
-            //createStage3Markers();
+        else if(getResult==3)
+            createStage3Markers();
 
-        currentLocation = map.addMarker(new MarkerOptions().position(MOLEA));
+        currentLocation = map.addMarker(new MarkerOptions().position(GRANM));
         this.currentLocation.setIcon(BitmapDescriptorFactory.fromResource(R.drawable.ic_launcher));
 
         map.moveCamera(CameraUpdateFactory.newLatLngZoom(TURIN, 30));
@@ -177,11 +199,14 @@ public class MainActivity extends Activity {
         mapPolyLine.remove();
 
     }
-    /*
-    private void createStage3Markers() {
 
+    private void createStage3Markers() {
+        start.setVisible(true);
+        turin.setVisible(true);
+        mole.setVisible(true);
+        gran.setVisible(true);
     }
-*/
+
     private void createStage2Markers() {
         start.setVisible(true);
         turin.setVisible(true);

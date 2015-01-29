@@ -27,11 +27,11 @@ public class Challenge1Activity extends ActionBarActivity {
         addListenerOnButton3();
         addListenerOnButton4();
 
-        Bundle bundle = getIntent().getExtras();
+        //    Bundle bundle = getIntent().getExtras();
 
-        String ch = bundle.getString("challenge");
+//        String ch = bundle.getString("challenge");
 
-        System.out.print(ch);
+        //      System.out.print(ch);
 
     }
 

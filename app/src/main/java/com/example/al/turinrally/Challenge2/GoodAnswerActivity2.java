@@ -39,16 +39,16 @@ public class GoodAnswerActivity2 extends ActionBarActivity {
         if (button == null)
             System.out.println("here");
         else
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(context, MainActivity.class);
-                int Stage = 2;
-                intent.putExtra("stage",Stage);
-                System.out.println("Stage value from good2 is = " + intent.getIntExtra("stage", 95));
-                startActivity(intent);
-            }
-        });
+            button.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(context, MainActivity.class);
+                    int Stage = 2;
+                    intent.putExtra("stage",Stage);
+                    System.out.println("Stage value from good2 is = " + intent.getIntExtra("stage", 95));
+                    startActivity(intent);
+                }
+            });
     }
     /*
     private void addListenerOnButton1() {
