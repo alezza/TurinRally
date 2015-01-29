@@ -68,7 +68,7 @@ public class FinalMysteryActivity extends ActionBarActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(context, GoodAnswerActivity.class);
+                Intent intent = new Intent(context, GoodFinalActivity.class);
                 startActivity(intent);
             }
         });

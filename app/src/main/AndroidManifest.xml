@@ -11,7 +11,7 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/ic_launcher"
+        android:icon="@drawable/symbol"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
@@ -118,7 +118,14 @@
         android:label="@string/title_activity_bad_answer_final"
         >
     </activity>
+    <activity android:name="com.example.al.turinrally.GoodFinalActivity"
+        android:label="@string/title_activity_good_final"
+        >
+    </activity>
 
     </application>
 
 </manifest>
+
+
+

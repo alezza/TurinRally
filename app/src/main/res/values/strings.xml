@@ -49,5 +49,6 @@
     <string name="title_activity_challenge4">Challenge4Activity</string>
     <string name="title_activity_final_mystery">FinalMysteryActivity</string>
     <string name="title_activity_bad_answer_final">BadAnswerFinal</string>
+    <string name="title_activity_good_final">GoodFinalActivity</string>
 
 </resources>
