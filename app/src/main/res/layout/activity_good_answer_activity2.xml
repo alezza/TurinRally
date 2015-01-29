@@ -15,8 +15,8 @@
         android:id="@+id/textView6"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:textColor="@color/text_color"
-        android:layout_marginTop="155dp" />
+        android:textColor="#ff020134"
+        android:layout_marginTop="100dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -25,18 +25,19 @@
         android:id="@+id/textViewLetter"
         android:layout_below="@+id/textView6"
         android:layout_centerVertical="true"
-        android:textColor="@color/text_color"
+        android:textColor="#ff020134"
         android:paddingBottom="40dp"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:textSize="12pt"/>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Get Next Stop"
         android:id="@+id/buttonnextstop"
-        android:layout_marginBottom="118dp"
-        android:background="#ffc8ffb8"
-        android:textStyle="italic"
+        android:layout_marginBottom="150dp"
+        android:background="@drawable/buttonshape"
+        android:textStyle="bold|italic"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
     <!--

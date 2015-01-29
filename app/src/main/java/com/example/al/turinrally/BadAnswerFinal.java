@@ -7,44 +7,29 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.ImageButton;
+import android.widget.Button;
 
-import com.example.al.turinrally.Challenge1.BadAnswerActivity;
-import com.example.al.turinrally.Challenge1.GoodAnswerActivity;
+import com.example.al.turinrally.Challenge4.Challenge4Activity;
 
 
-public class FinalMysteryActivity extends ActionBarActivity {
-    ImageButton button;
+public class BadAnswerFinal extends ActionBarActivity {
+    Button button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_final_mystery);
+        setContentView(R.layout.activity_bad_answer_final);
         addListenerOnButton1();
         addListenerOnButton2();
-        addListenerOnButton3();
-        addListenerOnButton4();
     }
 
-    private void addListenerOnButton4() {
+    private void addListenerOnButton1() {
         final Context context = this;
-        button = (ImageButton)findViewById(R.id.imageButton4);
+        button = (Button)findViewById(R.id.buttontryagain);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(context, BadAnswerFinal.class);
-                startActivity(intent);
-            }
-        });
-    }
-
-    private void addListenerOnButton3() {
-        final Context context = this;
-        button = (ImageButton)findViewById(R.id.imageButton3);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(context, BadAnswerFinal.class);
+                Intent intent = new Intent(context, FinalMysteryActivity.class);
                 startActivity(intent);
             }
         });
@@ -52,33 +37,20 @@ public class FinalMysteryActivity extends ActionBarActivity {
 
     private void addListenerOnButton2() {
         final Context context = this;
-        button = (ImageButton)findViewById(R.id.imageButton2);
+        button = (Button)findViewById(R.id.buttonback);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(context, BadAnswerFinal.class);
+                Intent intent = new Intent(context, MainMenuActivity.class);
                 startActivity(intent);
             }
         });
     }
-
-    private void addListenerOnButton1() {
-        final Context context = this;
-        button = (ImageButton)findViewById(R.id.imageButton1);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(context, GoodAnswerActivity.class);
-                startActivity(intent);
-            }
-        });
-    }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_final_mystery, menu);
+        getMenuInflater().inflate(R.menu.menu_bad_answer_final, menu);
         return true;
     }
 

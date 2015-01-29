@@ -95,7 +95,7 @@ public class MainActivity extends Activity {
                 .title("Start")
                 .snippet("Start Point is Here - Piazza Castello")
                 .icon(BitmapDescriptorFactory
-                        .fromResource(R.drawable.ic_launcher)));
+                        .fromResource(R.drawable.symbol)));
         start.showInfoWindow();
 
         mole = map.addMarker(new MarkerOptions()
@@ -103,7 +103,7 @@ public class MainActivity extends Activity {
                 .title("Mole Antonelliana")
                 .snippet("Second Point of Interest")
                 .icon(BitmapDescriptorFactory
-                        .fromResource(R.drawable.ic_launcher)));
+                        .fromResource(R.drawable.symbol)));
         mole.showInfoWindow();
 
         gran = map.addMarker(new MarkerOptions()
@@ -111,7 +111,7 @@ public class MainActivity extends Activity {
                 .title("Gran Madre Cathedral")
                 .snippet("Final Point of Interest")
                 .icon(BitmapDescriptorFactory
-                        .fromResource(R.drawable.ic_launcher)));
+                        .fromResource(R.drawable.symbol)));
         gran.showInfoWindow();
 
         turin.setVisible(false);

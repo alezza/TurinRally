@@ -114,6 +114,11 @@
             android:label="@string/title_activity_final_mystery"
             >
         </activity>
+    <activity android:name="com.example.al.turinrally.BadAnswerFinal"
+        android:label="@string/title_activity_bad_answer_final"
+        >
+    </activity>
+
     </application>
 
 </manifest>

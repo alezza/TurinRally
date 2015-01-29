@@ -4,7 +4,7 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/ic_launcher"
+        android:icon="@drawable/symbol"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
@@ -130,6 +130,14 @@
         <activity
             android:name=".FinalMysteryActivity"
             android:label="@string/title_activity_final_mystery" >
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".BadAnswerFinal"
+            android:label="@string/title_activity_bad_answer_final" >
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>

@@ -14,7 +14,9 @@
         android:text="Torino - Final Mystery"
         android:id="@+id/textView1"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:textColor="#ff020134"
+        android:layout_marginTop="10dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -22,9 +24,11 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="@string/mystery"
         android:id="@+id/textView2"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:layout_below="@+id/textView1"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:textColor="#ff020134"
+        android:paddingLeft="30dp" />
 
     <ImageButton
         android:layout_width="150dp"
@@ -34,7 +38,9 @@
         android:longClickable="true"
         android:layout_below="@+id/textView2"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="8dp" />
 
     <ImageButton
         android:layout_width="150dp"
@@ -44,7 +50,9 @@
         android:longClickable="true"
         android:layout_above="@+id/imageButton3"
         android:layout_alignRight="@+id/textView2"
-        android:layout_alignEnd="@+id/textView2" />
+        android:layout_alignEnd="@+id/textView2"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="8dp" />
 
     <ImageButton
         android:layout_width="150dp"
@@ -52,9 +60,10 @@
         android:id="@+id/imageButton3"
         android:layout_below="@+id/imageButton1"
         android:layout_alignParentLeft="true"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="6dp"
         android:src="@drawable/alfa"
-        android:longClickable="true" />
+        android:longClickable="true"
+        android:layout_marginLeft="25dp" />
 
     <ImageButton
         android:layout_width="150dp"
@@ -62,8 +71,9 @@
         android:id="@+id/imageButton4"
         android:layout_below="@+id/imageButton2"
         android:layout_alignParentRight="true"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="6dp"
         android:src="@drawable/w"
-        android:longClickable="true" />
+        android:longClickable="true"
+        android:layout_marginRight="20dp" />
 
 </RelativeLayout>

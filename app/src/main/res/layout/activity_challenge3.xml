@@ -16,7 +16,8 @@
         android:text="Challenge 3"
         android:id="@+id/textView1"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:textColor="#ff020134"/>
 
 
     <TextView
@@ -25,9 +26,12 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="What is the name of the famous movie filmed here?"
         android:id="@+id/textView2"
-        android:layout_marginTop="41dp"
+        android:layout_marginTop="70dp"
         android:layout_below="@+id/textView1"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:textColor="#ff020134"
+        android:paddingLeft="30dp"
+        android:layout_marginBottom="30dp" />
 
     <Button
         android:layout_width="wrap_content"
@@ -37,7 +41,8 @@
         android:color="#66FF0000"
         android:text="Roman Holiday"
         android:id="@+id/answerA"
-        />
+        android:background="@drawable/buttonshape"
+        android:layout_marginTop="20dp" />
 
     <Button
         android:layout_width="wrap_content"
@@ -47,7 +52,9 @@
         android:layout_below="@+id/answerA"
         android:text="Gran Torino"
         android:id="@+id/answerB"
-        android:color="#66FF0000" />
+        android:color="#66FF0000"
+        android:background="@drawable/buttonshape"
+        android:layout_marginTop="20dp"/>
 
     <Button
         android:layout_width="wrap_content"
@@ -57,7 +64,9 @@
         android:layout_below="@+id/answerB"
         android:text="La dolce vita"
         android:id="@+id/answerC"
-        android:color="#66FF0000" />
+        android:color="#66FF0000"
+        android:background="@drawable/buttonshape"
+        android:layout_marginTop="20dp"/>
 
     <Button
         android:layout_width="wrap_content"
@@ -67,7 +76,9 @@
         android:layout_below="@+id/answerC"
         android:text="The Italian Job"
         android:id="@+id/answerD"
-        android:color="#66FF0000"/>
+        android:color="#66FF0000"
+        android:background="@drawable/buttonshape"
+        android:layout_marginTop="20dp"/>
 
 </RelativeLayout>
 
